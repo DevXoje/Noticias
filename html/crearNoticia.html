@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/journal/bootstrap.min.css" integrity="sha384-QDSPDoVOoSWz2ypaRUidLmLYl4RyoBWI44iA5agn6jHegBxZkNqgm2eHb6yZ5bYs" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Crear noticia</title>
+    <script defer src="../js/Noticias.js"></script>
+    <script defer src="../js/crear_noticia.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Noticiero</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Noticias
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./crearNoticia.html">Crear</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./editarNoticia.html">Editar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./borrarNoticia.html">Borrar</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <form action="../php/alta.php" method="post" id="crear_noticia" class="card p-5">
+        <div class="form-group">
+            <label for="noticia_titulo">Titulo</label>
+            <input type="text" class="form-text" name="noticia_titulo" id="noticia_titulo" maxlength="45" required>
+        </div>
+        <div class="form-group">
+            <label for="noticia_subtitulo">Subtitulo</label>
+            <input type="text" class="form-text" name="noticia_subtitulo" id="noticia_subtitulo" maxlength="90" required>
+        </div>
+        <div class="form-group">
+            <label for="noticia_imagen">Imagenes</label>
+            <select class="form-control" name="noticia_imagen" id="noticia_imagen" required>
+                <option>Maquina</option>
+                <option>Movil</option>
+                <option>Periodico</option>
+                <option>Periodista</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="noticia_descripcion" class="form-label mt-4">Descripcion</label>
+            <textarea class="form-control" id="noticia_descripcion" name="noticia_descripcion"rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 116px;" maxlength="60000" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Crear</button>
+    </form>
+
+</body>
+
+</html>
